@@ -35,5 +35,12 @@
       </div>
     </div>
   </body>
-  <script></script>
+  <script>
+    const item = document.querySelector(".box");
+    function setitem(event, color) {
+      event.target.style.backgroundColor = color;
+    }
+    item.addEventListener("mouseover", (event) => setitem(event, "aqua"));
+    item.addEventListener("mouseout", (event) => setitem(event, "beige"));
+  </script>
 </html>
