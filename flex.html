@@ -5,19 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./felx.css" />
-  </head>
+    <style>
+      .container {
+  width: 100%;
+  min-width: 1080px;
+  font-family: "Spoqa Han Sans Neo", sans-serif, 돋움, Dotum, helvetica;
+}
+
+.toptop {
+  display: flex;
+  align-items: center;
+  width: 1080px;
+  height: 50px;
+  font-size: 9px;
+}
+
+.intop {
+  margin-right: 10px;
+}
+
+.imgimg {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 1080px;
+  height: 80px;
+}
+
+.baemin {
+  margin-right: 20px;
+}
+
+.header {
+  width: 1080px;
+  position: relative;
+  background-color: beige;
+  display: flex;
+  padding-right: 100px;
+  align-items: center;
+}
+
+.box {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+    </style>
   <body>
     <div class="container">
+      <!-- 맨위 -->
       <div class="toptop">
         <div class="intop">배민외식업광장</div>
         <div class="intop">배민아카데미</div>
         <div class="intop">개인장부</div>
         <div class="intop">배민로봇</div>
       </div>
+      <!-- 중간 -->
       <div class="search">
         <div class="baemin">배민상회</div>
-        <input type="text" />
+        <div>
+        <input placeholder="2월 쿠폰팩 증정~" type="text" />
+        <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m21.71 20.29-5.75-5.75A7.466 7.466 0 0 0 17.5 10c0-4.14-3.36-7.5-7.5-7.5-4.14 0-7.5 3.36-7.5 7.5 0 4.14 3.36 7.5 7.5 7.5 1.71 0 3.28-.58 4.54-1.54l5.75 5.75 1.42-1.42ZM4.5 10c0-3.03 2.47-5.5 5.5-5.5s5.5 2.47 5.5 5.5-2.47 5.5-5.5 5.5A5.51 5.51 0 0 1 4.5 10Z" fill="#333"></path>
+        </svg>
       </div>
+      </div>
+      <!-- 맨아래 -->
       <div class="header">
         <div class="box">
           <img
@@ -35,7 +95,10 @@
       </div>
     </div>
   </body>
+
   <script>
+
+    //메뉴에 마우스올리면 색상 변경 (금주의 행사부터는 적용안되는데 찾아봐야겠슴)
     const item = document.querySelector(".box");
     function setitem(event, color) {
       event.target.style.backgroundColor = color;
@@ -43,4 +106,5 @@
     item.addEventListener("mouseover", (event) => setitem(event, "aqua"));
     item.addEventListener("mouseout", (event) => setitem(event, "beige"));
   </script>
+
 </html>
